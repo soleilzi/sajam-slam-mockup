@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+{% load image_format %}
+
+<h1>TEAMS</h1>
+
+<div class="container">
+  <div class="row gx-5" id="teamrow">
+    {% for team_name, streamers in team_info.items %}
+      <div class="col-md-4 d-flex justify-content-center mb-4">
+        <div class="card" style="width: 30rem;">
+          <div class="card-header text-center">
+            <a href="{% url 'team_detail' team_name %}" class="btn btn-primary">Team {{ team_name }}</a>
+          </div>
+          <ul class="list-group list-group-flush">
+              {% for streamer in streamers %}
+              <li class="list-group-item d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                  <img src="{% static streamer.name|get_image %}" alt="{{ streamer.name }}" class="img-fluid rounded me-3" style="width: 50px; height: 50px;">
+                  <span class="
+                    {% if streamer.rank == '1' %} text-custom-1 
+                    {% elif streamer.rank == '2' %} text-custom-2 
+                    {% elif streamer.rank == '3' %} text-custom-3 
+                    {% elif streamer.rank == '4' %} text-custom-4 
+                    {% elif streamer.rank == '5' %} text-custom-5 
+                    {% else %} text-custom-4 
+                    {% endif %}
+                  ">{{ streamer.name }}</span>
+                </div>
+                <a href="#" class="btn btn-primary">Button</a>
+              </li>
+              {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% if forloop.counter|divisibleby:"3" and not forloop.last %}
+        </div>
+        <div class="row gx-5" id="teamrow">
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

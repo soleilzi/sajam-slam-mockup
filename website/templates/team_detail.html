@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card w-50 mx-auto">
+        <div class="card-header">
+            Team Members
+        </div>
+        <ul class="list-group list-group-flush">
+            {% for member in team_members %}
+                <li class="list-group-item">
+                    <strong>Name:</strong> {{ member.name }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

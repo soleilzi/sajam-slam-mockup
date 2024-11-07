@@ -1,0 +1,123 @@
+body {
+  background-color: #f06543; 
+  background-image: linear-gradient(315deg, #f06543 0%, #ffbe3d 74%); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  min-height: 100vh;
+}
+
+#teamrow {
+  margin-bottom: 35px;
+}
+
+#slamancpic {
+  border-radius: 30px;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+.bg-custom-1 { background-color: #ff5733; color: white; }
+.bg-custom-2 { background-color: #33ff57; color: white; }
+.bg-custom-3 { background-color: #ec716d; color: white; }
+.bg-custom-4 { background-color: #f1c40f; }
+.bg-custom-5 { background-color: #e74c3c; color: white; }
+
+.text-custom-1 {
+  color: #FF0000; /* Example color for rank 1 */
+}
+
+.text-custom-2 {
+  color: #00FF00; /* Example color for rank 2 */
+}
+
+.text-custom-3 {
+  color: #0000FF; /* Example color for rank 3 */
+}
+
+.text-custom-4 {
+  color: #FFFF00; /* Example color for rank 4 */
+}
+
+.text-custom-5 {
+  color: #FF00FF; /* Example color for rank 5 */
+}
+
+#card_members {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+}
+
+
+
+/* From Uiverse.io by mobinkakei */ 
+.cta {
+  display: flex;
+  padding: 11px 33px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  color: white;
+  background: #6225e6;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+  cursor: pointer;
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #fbc638;
+}
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.span {
+  transform: skewX(15deg);
+}
+
+.second {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+

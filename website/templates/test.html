@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+      Featured
+  </div>
+  <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex align-items-center">
+          <img src="{% static 'images/sajam.jpg' %}" alt="Item 1" class="img-fluid rounded me-3" style="width: 50px; height: 50px;">
+          <span>An item</span>
+          <img src="{% static 'images/sajam.jpg' %}" alt="Item 1" class="img-fluid rounded me-3" style="width: 50px; height: 50px;">
+      </li>
+      <li class="list-group-item d-flex align-items-center">
+          <img src="https://via.placeholder.com/50" alt="Item 2" class="img-fluid rounded me-3" style="width: 50px; height: 50px;">
+          <span>A second item</span>
+      </li>
+      <li class="list-group-item d-flex align-items-center">
+          <img src="https://via.placeholder.com/50" alt="Item 3" class="img-fluid rounded me-3" style="width: 50px; height: 50px;">
+          <span>A third item</span>
+      </li>
+  </ul>
+</div>
+{% endblock %}

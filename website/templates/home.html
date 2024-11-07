@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="p-5 bg-primary" id="slamancpic">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'images/slamanc.jpg' %}" class="d-block w-100" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/sajam.jpg' %}" class="d-block w-100" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/another_image.jpg' %}" class="d-block w-100" alt="Third slide">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="card mb-3" style="max-width: 540px;" id="sajamcard">
+      <div class="row g-0">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="{% static 'images/sajam.jpg' %}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8 d-flex justify-content-center align-items-center">
+          <div class="card-body text-center">
+            {% if sajam %}
+              <h1>{{ sajam.name }}</h1>
+              <p>Twitter: <a href="{{ sajam.twitter }}">{{ sajam.twitter }}</a></p>
+              <p>Twitch: <a href="{{ sajam.twitch }}">{{ sajam.twitch }}</a></p>
+              <p>YouTube: <a href="{{ sajam.youtube }}">{{ sajam.youtube }}</a></p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <div class="p-5 bg-secondary text-white text-center">
+        Small Column 2
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
